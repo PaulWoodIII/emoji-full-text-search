@@ -15,6 +15,8 @@
 		DA255F551DC178A5002E52F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA255F531DC178A5002E52F5 /* LaunchScreen.storyboard */; };
 		DA255F601DC178A5002E52F5 /* FullTextEmojiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA255F5F1DC178A5002E52F5 /* FullTextEmojiTests.swift */; };
 		DA255F6B1DC178A5002E52F5 /* FullTextEmojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA255F6A1DC178A5002E52F5 /* FullTextEmojiUITests.swift */; };
+		DA255F791DC178BC002E52F5 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA255F781DC178BC002E52F5 /* Emoji.swift */; };
+		DA255F7B1DC17939002E52F5 /* emojis.json in Resources */ = {isa = PBXBuildFile; fileRef = DA255F7A1DC17939002E52F5 /* emojis.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		DA255F661DC178A5002E52F5 /* FullTextEmojiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FullTextEmojiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA255F6A1DC178A5002E52F5 /* FullTextEmojiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTextEmojiUITests.swift; sourceTree = "<group>"; };
 		DA255F6C1DC178A5002E52F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA255F781DC178BC002E52F5 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		DA255F7A1DC17939002E52F5 /* emojis.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emojis.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				DA255F511DC178A5002E52F5 /* Assets.xcassets */,
 				DA255F531DC178A5002E52F5 /* LaunchScreen.storyboard */,
 				DA255F561DC178A5002E52F5 /* Info.plist */,
+				DA255F781DC178BC002E52F5 /* Emoji.swift */,
+				DA255F7A1DC17939002E52F5 /* emojis.json */,
 			);
 			path = FullTextEmoji;
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 			files = (
 				DA255F551DC178A5002E52F5 /* LaunchScreen.storyboard in Resources */,
 				DA255F521DC178A5002E52F5 /* Assets.xcassets in Resources */,
+				DA255F7B1DC17939002E52F5 /* emojis.json in Resources */,
 				DA255F501DC178A5002E52F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +274,7 @@
 			files = (
 				DA255F4D1DC178A5002E52F5 /* DetailViewController.swift in Sources */,
 				DA255F4B1DC178A5002E52F5 /* MasterViewController.swift in Sources */,
+				DA255F791DC178BC002E52F5 /* Emoji.swift in Sources */,
 				DA255F491DC178A5002E52F5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
