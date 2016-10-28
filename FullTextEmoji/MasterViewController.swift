@@ -13,10 +13,23 @@ class MasterViewController: UITableViewController {
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
     var emojis = [Emoji]()
-
+    var filteredEmojis = [Emoji]()
+    var searchController : UISearchController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        searchController = ({
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchResultsUpdater = self
+            controller.dimsBackgroundDuringPresentation = false
+            controller.searchBar.sizeToFit()
+            controller.searchBar.delegate = self
+            return controller
+        })()
+
+        self.tableView.tableHeaderView = searchController.searchBar
+        
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
@@ -70,16 +83,43 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return emojis.count
+        if searchController.isActive {
+            return filteredEmojis.count
+        } else {
+            return emojis.count
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        let object = emojis[indexPath.row]
+        var object : Emoji
+
+        if searchController.isActive {
+            object = filteredEmojis[indexPath.row]
+        } else {
+            object = emojis[indexPath.row]
+        }
+        
+        
         cell.textLabel!.text = object.description
         return cell
     }
     
 }
 
+extension MasterViewController : UISearchResultsUpdating, UISearchBarDelegate {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        if let text = searchController.searchBar.text ,
+            text != "",
+            searchController.isActive {
+            filteredEmojis = emojis.filter() {
+                return ($0.fts as NSString).localizedCaseInsensitiveContains(text)
+            }
+            print(filteredEmojis)
+        }
+        tableView.reloadData()
+    }
+}

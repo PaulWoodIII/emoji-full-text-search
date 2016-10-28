@@ -17,6 +17,7 @@
 		DA255F6B1DC178A5002E52F5 /* FullTextEmojiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA255F6A1DC178A5002E52F5 /* FullTextEmojiUITests.swift */; };
 		DA255F791DC178BC002E52F5 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA255F781DC178BC002E52F5 /* Emoji.swift */; };
 		DA255F7B1DC17939002E52F5 /* emojis.json in Resources */ = {isa = PBXBuildFile; fileRef = DA255F7A1DC17939002E52F5 /* emojis.json */; };
+		DA255F7D1DC18830002E52F5 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA255F7C1DC18830002E52F5 /* String+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		DA255F6C1DC178A5002E52F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA255F781DC178BC002E52F5 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		DA255F7A1DC17939002E52F5 /* emojis.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emojis.json; sourceTree = "<group>"; };
+		DA255F7C1DC18830002E52F5 /* String+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				DA255F561DC178A5002E52F5 /* Info.plist */,
 				DA255F781DC178BC002E52F5 /* Emoji.swift */,
 				DA255F7A1DC17939002E52F5 /* emojis.json */,
+				DA255F7C1DC18830002E52F5 /* String+Utils.swift */,
 			);
 			path = FullTextEmoji;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA255F7D1DC18830002E52F5 /* String+Utils.swift in Sources */,
 				DA255F4D1DC178A5002E52F5 /* DetailViewController.swift in Sources */,
 				DA255F4B1DC178A5002E52F5 /* MasterViewController.swift in Sources */,
 				DA255F791DC178BC002E52F5 /* Emoji.swift in Sources */,

@@ -8,18 +8,25 @@
 
 import Foundation
 
-struct Emoji {
+class Emoji {
     var title : String
     var keywords : [String]
     var char : String
     var category : String
+    var fts : String
     
     init(title incTitle: String, dictionary : [String: Any]){
         title = incTitle
         keywords = dictionary["keywords"] as! [String]
         char = dictionary["char"] as! String
         category = dictionary["category"] as! String
+        var composing = keywords.joined(separator: "|")
+        composing = title + composing
+        composing = char + composing
+        composing = category + composing
+        fts = composing
     }
+    
 }
 
 extension Emoji : CustomStringConvertible {
